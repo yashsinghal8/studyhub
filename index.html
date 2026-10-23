@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="StudyHub - free study notes, PDFs, programming resources, and exam preparation materials for students." />
+  <title>StudyHub | Free Study Notes & Resources</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="StudyHub home"><span class="brand-icon">S</span> StudyHub</a>
+    <nav class="nav">
+      <a href="#resources">Resources</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="header-cta" href="#resources">Explore Notes <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR LEARNING SPACE</div>
+        <h1>Study smarter.<br /><span>Achieve more.</span></h1>
+        <p class="hero-text">Find clear notes, useful study guides, programming resources, and exam preparation materials—all in one place.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#resources">Explore resources <span>→</span></a>
+          <a class="text-link" href="#subjects">Browse subjects <span>↓</span></a>
+        </div>
+        <div class="hero-proof"><div class="proof-avatars"><span>📘</span><span>💻</span><span>✏️</span></div><span>Made for curious learners</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of study materials">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="floating-card card-note"><span class="card-icon lavender">▤</span><div><strong>Study notes</strong><small>Learn at your pace</small></div></div>
+        <div class="book-stack"><div class="book book-back"></div><div class="book book-mid"></div><div class="book book-front"><span>STUDY<br />GUIDE</span><i></i></div></div>
+        <div class="floating-card card-code"><span class="code-mark">&lt;/&gt;</span><div><strong>Practice code</strong><small>Build your skills</small></div></div>
+        <div class="art-spark spark-one">✦</div><div class="art-spark spark-two">✳</div>
+      </div>
+    </section>
+
+    <section class="search-panel" aria-label="Search study resources">
+      <div class="search-intro"><strong>What are you learning today?</strong><span>Search notes and study resources</span></div>
+      <form id="searchForm" class="search-box">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Try “C programming” or “Mathematics”..." aria-label="Search resources" />
+        <button type="submit">Search <span>→</span></button>
+      </form>
+    </section>
+
+    <section class="section subjects-section" id="subjects">
+      <div class="section-heading">
+        <div><div class="eyebrow">FIND YOUR PATH</div><h2>Explore by subject</h2></div>
+        <p>Start with a topic, then build your knowledge one step at a time.</p>
+      </div>
+      <div class="subject-grid">
+        <button class="subject-card" data-filter="programming"><span class="subject-icon icon-blue">⌘</span><strong>Programming</strong><small>C, C++, Java, Python</small><span class="card-arrow">↗</span></button>
+        <button class="subject-card" data-filter="mathematics"><span class="subject-icon icon-orange">∑</span><strong>Mathematics</strong><small>Concepts & solved problems</small><span class="card-arrow">↗</span></button>
+        <button class="subject-card" data-filter="computer science"><span class="subject-icon icon-green">▦</span><strong>Computer Science</strong><small>DBMS, OS, Networks</small><span class="card-arrow">↗</span></button>
+        <button class="subject-card" data-filter="exam preparation"><span class="subject-icon icon-pink">✎</span><strong>Exam Preparation</strong><small>Revision & question sets</small><span class="card-arrow">↗</span></button>
+      </div>
+    </section>
+
+    <section class="section resources-section" id="resources">
+      <div class="section-heading">
+        <div><div class="eyebrow">THE STUDY LIBRARY</div><h2>Popular resources</h2></div>
+        <a class="view-all" href="#resources" id="clearFilter">View all resources <span>→</span></a>
+      </div>
+      <div class="filter-row" aria-label="Filter resources">
+        <button class="filter-chip active" data-filter="all">All resources</button>
+        <button class="filter-chip" data-filter="programming">Programming</button>
+        <button class="filter-chip" data-filter="mathematics">Mathematics</button>
+        <button class="filter-chip" data-filter="computer science">Computer Science</button>
+        <button class="filter-chip" data-filter="exam preparation">Exam prep</button>
+      </div>
+      <div class="resource-grid" id="resourceGrid">
+        <article class="resource-card" data-category="programming">
+          <div class="resource-cover cover-blue"><span class="file-badge">PDF GUIDE</span><div class="cover-graphic">&lt;/&gt;</div><span class="cover-label">PROGRAMMING BASICS</span></div>
+          <div class="resource-content"><div class="resource-meta"><span>PROGRAMMING</span><span>Beginner</span></div><h3>C Programming: Beginner's Notes</h3><p>Understand variables, loops, functions, arrays, and pointers.</p><a class="resource-link" href="#upload-guide">Add your PDF <span>↗</span></a></div>
+        </article>
+        <article class="resource-card" data-category="mathematics">
+          <div class="resource-cover cover-peach"><span class="file-badge">STUDY NOTES</span><div class="cover-graphic">∑</div><span class="cover-label">ENGINEERING MATHS</span></div>
+          <div class="resource-content"><div class="resource-meta"><span>MATHEMATICS</span><span>First year</span></div><h3>Engineering Mathematics</h3><p>Organized revision notes and worked examples for key topics.</p><a class="resource-link" href="#upload-guide">Add your PDF <span>↗</span></a></div>
+        </article>
+        <article class="resource-card" data-category="computer science">
+          <div class="resource-cover cover-green"><span class="file-badge">QUICK GUIDE</span><div class="cover-graphic">▤</div><span class="cover-label">DATABASE SYSTEMS</span></div>
+          <div class="resource-content"><div class="resource-meta"><span>COMPUTER SCIENCE</span><span>Core subject</span></div><h3>DBMS Quick Revision Guide</h3><p>Review SQL, normalization, keys, transactions, and more.</p><a class="resource-link" href="#upload-guide">Add your PDF <span>↗</span></a></div>
+        </article>
+        <article class="resource-card" data-category="computer science">
+          <div class="resource-cover cover-lilac"><span class="file-badge">STUDY NOTES</span><div class="cover-graphic">◫</div><span class="cover-label">OPERATING SYSTEMS</span></div>
+          <div class="resource-content"><div class="resource-meta"><span>COMPUTER SCIENCE</span><span>Core subject</span></div><h3>Operating Systems Notes</h3><p>Learn processes, scheduling, memory, and file management.</p><a class="resource-link" href="#upload-guide">Add your PDF <span>↗</span></a></div>
+        </article>
+        <article class="resource-card" data-category="programming">
+          <div class="resource-cover cover-yellow"><span class="file-badge">PRACTICE SET</span><div class="cover-graphic">{ }</div><span class="cover-label">DATA STRUCTURES</span></div>
+          <div class="resource-content"><div class="resource-meta"><span>PROGRAMMING</span><span>Beginner–intermediate</span></div><h3>Data Structures & Algorithms</h3><p>Practice arrays, linked lists, stacks, queues, trees, and sorting.</p><a class="resource-link" href="#upload-guide">Add your PDF <span>↗</span></a></div>
+        </article>
+        <article class="resource-card" data-category="exam preparation">
+          <div class="resource-cover cover-pink"><span class="file-badge">EXAM PREP</span><div class="cover-graphic">✓</div><span class="cover-label">REVISION PLANNER</span></div>
+          <div class="resource-content"><div class="resource-meta"><span>EXAM PREPARATION</span><span>All levels</span></div><h3>Exam Revision Checklist</h3><p>Plan your revision, track topics, and prepare practice questions.</p><a class="resource-link" href="#upload-guide">Add your PDF <span>↗</span></a></div>
+        </article>
+      </div>
+      <div id="noResults" class="no-results" hidden>No matching resources found. Try another search.</div>
+    </section>
+
+    <section class="upload-banner" id="upload-guide">
+      <div class="upload-symbol">＋</div><div><div class="eyebrow">GROW THE LIBRARY</div><h2>Have notes to share?</h2><p>Add your own study materials and help other students learn. This starter website uses sample cards—follow the README to add your real PDF links.</p></div>
+      <a class="button button-light" href="#about">How to add content <span>→</span></a>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="about-card"><div class="about-mark">S.</div><div><div class="eyebrow">ABOUT STUDYHUB</div><h2>Learning resources, made easier to find.</h2><p>StudyHub is a starter template for an educational website. Add original notes, explain concepts clearly, and organize every resource so students can find what they need.</p></div></div>
+      <div class="about-points"><div><span>01</span><strong>Useful content first</strong><p>Publish accurate, original resources.</p></div><div><span>02</span><strong>Easy to navigate</strong><p>Sort materials by course and topic.</p></div><div><span>03</span><strong>Search-ready foundation</strong><p>Use clear page titles and descriptions.</p></div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#"><span class="brand-icon">S</span> StudyHub</a><p>Made for learning. Customize this starter site for your students.</p><span>© <span id="year"></span> StudyHub</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
